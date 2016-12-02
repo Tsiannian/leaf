@@ -3,8 +3,8 @@ package chanrpc
 import (
 	"errors"
 	"fmt"
-	"github.com/name5566/leaf/conf"
-	"github.com/name5566/leaf/log"
+	"leaf/conf"
+	"leaf/log"
 	"runtime"
 )
 
@@ -127,11 +127,12 @@ func (s *Server) exec(ci *CallInfo) (err error) {
 	panic("bug")
 }
 
-func (s *Server) Exec(ci *CallInfo) {
+func (s *Server) Exec(ci *CallInfo) error {
 	err := s.exec(ci)
 	if err != nil {
 		log.Error("%v", err)
 	}
+	return err
 }
 
 // goroutine safe

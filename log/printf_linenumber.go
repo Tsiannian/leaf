@@ -1,5 +1,3 @@
-// +build log_linenumber
-
 package log
 
 import (

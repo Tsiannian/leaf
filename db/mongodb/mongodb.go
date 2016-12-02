@@ -2,11 +2,11 @@ package mongodb
 
 import (
 	"container/heap"
-	"github.com/name5566/leaf/log"
-	"gopkg.in/mgo.v2"
-	"gopkg.in/mgo.v2/bson"
+	"leaf/log"
 	"sync"
 	"time"
+	"extra/mgo"
+	"extra/mgo/bson"
 )
 
 // session
